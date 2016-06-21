@@ -1,6 +1,8 @@
 {
 	"name": "landho",
-	"version": "1.0.0",
+	"productName": "LandHo",
+	"icon": "icon.png",
+	"version": "0.0.1",
 	"description": "",
 	"main": "main.js",
 	"dependencies": {
