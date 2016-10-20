@@ -2,7 +2,7 @@
 	"name": "landho",
 	"productName": "Land Ho",
 	"icon": "icon.png",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Offline Sailboat Cruising Guides for all Countries, Worldwide.",
 	"main": "main.js",
 	"dependencies": {
