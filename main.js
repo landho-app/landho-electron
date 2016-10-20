@@ -1,12 +1,5 @@
 var app = require("app");
-var os = require("os");
-var browserWindow = require("browser-window");
-var autoUpdater = require("auto-updater");
-
-var platform = os.platform() + "_" + os.arch();
-var version = app.getVersion();
-
-autoUpdater.setFeedURL("http://update.landho-app.com/update/" + platform + "/" + version);
+var BrowserWindow = require("browser-window");
 
 // keep a global reference of the window object, if you don"t, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -27,14 +20,13 @@ app.on("window-all-closed", function() {
 app.on("ready", function() {
 
 	// create the browser window.
-	mainWindow = new browserWindow({
+	mainWindow = new BrowserWindow({
 		"width": 1200,
-		"height": 800,
-		"node-integration": false
+		"height": 800
 	});
 
 	// and load the index.html of the app.
-	mainWindow.loadURL("file://" + __dirname + "/landho-core/index.html");
+	mainWindow.loadURL("file://" + __dirname + "/landho-core/index.html?version=" + process.env.npm_package_version);
 	//mainWindow.toggleDevTools();
 
 	// emitted when the window is closed.
