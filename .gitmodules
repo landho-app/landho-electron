@@ -1,0 +1,3 @@
+[submodule "landho-core"]
+	path = landho-core
+	url = https://github.com/landho-app/landho-core.git

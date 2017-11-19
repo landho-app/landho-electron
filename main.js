@@ -1,5 +1,4 @@
-var app = require("app");
-var BrowserWindow = require("browser-window");
+const { app, Menu, BrowserWindow, ipcMain } = require("electron");
 
 // keep a global reference of the window object, if you don"t, the window will
 // be closed automatically when the JavaScript object is garbage collected.
