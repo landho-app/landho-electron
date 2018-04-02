@@ -24,12 +24,9 @@ app.on("ready", function() {
 
 	// and load the index.html of the app.
 	mainWindow.loadURL(
-		"file://" +
-			__dirname +
-			"/landho-core/index.html?version=" +
-			process.env.npm_package_version
+		"file://" + __dirname + "/landho-core/index.html?version=" + process.env.npm_package_version
 	);
-	//mainWindow.toggleDevTools();
+	mainWindow.toggleDevTools();
 
 	// emitted when the window is closed.
 	mainWindow.on("closed", function() {

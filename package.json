@@ -3,8 +3,7 @@
 	"productName": "Land Ho",
 	"icon": "icon.png",
 	"version": "1.0.1",
-	"description":
-		"Offline Sailboat Cruising Guides for all Countries, Worldwide.",
+	"description": "Offline Sailboat Cruising Guides for all Countries, Worldwide.",
 	"main": "main.js",
 	"dependencies": {
 		"pretty-bytes": "^2.0.1",
@@ -13,12 +12,19 @@
 	},
 	"scripts": {
 		"start": "electron main.js",
+		"package": "electron-packager ./ LandHo --all --out ./build --ignore='^/build$' --electron-version 1.7.9 --overwrite  --version-string.CompanyName='Thomas Brüggemann' --version-string.LegalCopyright='Copyright (C) 2018 Thomas Brüggemann' --version-string.FileDescription=$npm_package_productName --version-string.OriginalFilename='LandHo.exe' --version-string.InternalName=$npm_package_productName --version-string.ProductName=$npm_package_productName --version-string.ProductVersion=$npm_package_version --icon=./icon.ico",
 		"package:mac":
 			"electron-packager ./ LandHo --platform=darwin --arch=all --out ./build --ignore='^/build$' --electron-version 1.7.9 --overwrite --icon=./icon.icns",
 		"package:win":
-			"electron-packager ./ LandHo --platform=win32 --arch=all --out ./build --ignore='^/build$' --electron-version 1.7.9 --overwrite --version-string.CompanyName='Thomas Brüggemann' --version-string.LegalCopyright='Copyright (C) 2016 Thomas Brüggemann' --version-string.FileDescription=$npm_package_productName --version-string.OriginalFilename='LandHo.exe' --version-string.InternalName=$npm_package_productName --version-string.ProductName=$npm_package_productName --version-string.ProductVersion=$npm_package_version --icon=./icon.ico"
+			"electron-packager ./ LandHo --platform=win32 --arch=all --out ./build --ignore='^/build$' --electron-version 1.7.9 --overwrite --version-string.CompanyName='Thomas Brüggemann' --version-string.LegalCopyright='Copyright (C) 2018 Thomas Brüggemann' --version-string.FileDescription=$npm_package_productName --version-string.OriginalFilename='LandHo.exe' --version-string.InternalName=$npm_package_productName --version-string.ProductName=$npm_package_productName --version-string.ProductVersion=$npm_package_version --icon=./icon.ico"
 	},
 	"author": "Thomas Brüggemann",
 	"license": "MIT",
-	"homepage": "https://landho-app.com"
+	"homepage": "https://landho-app.com",
+	"prettier": {
+		"printWidth": 100,
+		"useTabs": true,
+		"tabWidth": 4,
+		"arrowParens": "always"
+	}
 }
